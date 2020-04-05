@@ -1,28 +1,15 @@
 body{
 		margin:0;
 		padding:0;
-		background:url("../images/bg_all.jpg") no-repeat;
-		background-size:100%;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+		
 	}
 
 
->
 
-html{
-	height: 100%;
-	box-shadow:0px 0px 300px #000 inset;
-	-webkit-box-shadow:0px 0px 50px #000 inset;
-	  margin: 0;
-	  width: 100%;
-	  overflow: hidden;
-}
 form{
 	position:absolute;
 	left:50%;
-	top:50%;
+	top:60%;
 	margin-left:-300px;
 	margin-top:-220px;
 	width:480px;
@@ -33,6 +20,12 @@ form{
 	text-align:center;
 	padding:65px;
 	/*box-shadow: 0px 0px 15px #0005;*/
+}
+.foot_font{
+    margin-left: 10%;
+	padding-bottom:50px;
+    font-size: 20px;
+	float:left;
 }
 .input_1{
 	outline:none;
@@ -53,7 +46,7 @@ form{
 h1{
 	color:#fff;
 }
-	/*单选*/
+	
 .radio_box{ display:inline-block; position:relative;margin:20px 5px;}
 .radio_box label{ width:15px; height:15px; position:absolute; top:0; left:0; border:2px solid #3A5367; border-radius:50%; background:#fff; cursor:pointer;}
 .radio_box input:checked + label:after{ content:''; width:9px; height:9px; position:absolute; top:3px; left:3px; background:#3A5367; border-radius:50%;}
@@ -70,57 +63,135 @@ h1{
 }
 
 
-
-
-
-
-#Layer80 {
-	position:absolute;
-	width: 100%;
-	height:58px;
-	z-index:4;
-	background-color: #4A05B1;
-	left: -1px;
-	top: -3px;
+.heading{
+    background-color:#434172;
+    width: 100%;
+    height: 117px;
+    margin: 0px auto;
 }
-  #Layer90 {
-	position:absolute;
-	width:100%;
-	height:44px;
-	/*z-index:1;*/
-	/*left: -33px;*/
-	  bottom: 0;
-	background-color: #fff9fb;
+.heading_nav{
+    width: 100%;
+    height: 30px;
 }
-
-
-
-
- #Layer100 {
-	position:absolute;
-	width:224px;
-	height:85px;
-	z-index:5;
-	left: -7px;
-	top: -14px;
+.heading_logo{
+    margin-left: 19px;
+    margin-top: 12px;
+    float: left;
+    width: 279px;
+    float: left;
+    height:153px;
 }
-
-  #Layer120 {
-	position:absolute;
-	width:100%;
-	height:23px;
-	z-index:7;
-	/*left: -3px;*/
-	top: 52px;
-	background-color: #ffffff;
-}
-  #Layer130 {
-	position:absolute;
-	width:200px;
-	height:115px;
-	z-index:8;
-	left: -5px;
-	top: -7px;
+.heading_Sign_out{
+    top: 72px;
+    font-size: 24px;
+    position: absolute;
+    right: 130px;
 }
 
 
+.heading_font{
+    margin-top: 12px;
+    font-size: 24px;
+    
+}
+
+.welcome{
+    margin-left: 500px;
+    width: 500px;
+    font-size: 20px;
+	padding-top:90px;
+	padding-bottom:0px;
+	color:#FFFFFF;
+	
+	  text-align:center;
+}
+
+
+
+.body{
+	margin:0;
+	padding:0;
+    width: 100%;
+    height: 600px;
+    margin-top:60px;
+   
+    
+ 
+    background:url("../images/bg_all.jpg") no-repeat;
+		background-size:100%;
+	overflow: hidden;
+
+}
+.footing{
+    margin-left: 14%;
+    margin-right: 10%;
+    margin-top: 40px;
+    height:100px;
+    width:75%;
+    border-top-color: #ebeef0;
+    border-top-style: groove;
+    border-top-width: 1px;
+}
+.table_heading{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 50px;
+}
+table{
+    margin: auto auto;
+}
+ul,li{list-style: none;}
+nav .level>li{float: right;width: 18%;text-align: center; padding-top:-50px; padding-left:10px; padding-right:10px;
+               padding-bottom:10px;font-size: 20px;margin-top:-25px;}   
+nav .two{display: none;}  
+nav .level>li:hover .two{display: block;}  
+nav .level>li a{color: white;}
+nav .level>li:hover{background:#434172 ;}
+a:link,a:visited{
+
+    color: #e7e7e9;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+a:active,a:hover{
+    color: #b7acad;
+    text-align: center;
+
+}
+
+
+.lib{
+	position:absolute;
+	left:300px;
+	top:352px;
+	width:300px;
+	height:280px;
+	color:#fff;
+	text-align:center;
+	background-image: url(../images/b.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius:25px;
+	line-height:220px;
+}
+.lend{
+	position:absolute;
+	left:900px;
+	top:352px;
+	text-align: center;
+	width:300px;
+	height:280px;
+	border-radius:25px;
+	color:#fff;
+	text-align:center;
+	background-image: url(../images/b.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	line-height:75px;
+	
+	
+	
+}
