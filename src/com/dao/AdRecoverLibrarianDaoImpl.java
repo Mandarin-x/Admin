@@ -16,7 +16,7 @@ public class AdRecoverLibrarianDaoImpl implements AdRecoverLibrarianDao {
 	
 	public String Adid() {
 		
-		String sql = "select * from admin where ad_state=1 ";
+		String sql = "select * from admin_ where ad_state=1 ";
 		String admin = new String();
 		try {
             	DBconn.init();
@@ -40,7 +40,7 @@ public class AdRecoverLibrarianDaoImpl implements AdRecoverLibrarianDao {
 		if(i>0){
 			flag = true;
 			String admin = Adid();
-			logger.info("[ADMIN]ID:" + admin + "   " + "recover the librarian '" + id +"' successfully.");
+			logger.info("[ADMIN]ID:" + admin + "   " + "recover the librarian '" + id +"' successfully his password is " + password);
 		}else {
 			String admin = Adid();
 			logger.info("[ADMIN]ID:" + admin + "   " + "recover the librarian '" + id +"' failed.");
@@ -62,7 +62,8 @@ public class AdRecoverLibrarianDaoImpl implements AdRecoverLibrarianDao {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-            return password;
+		System.out.println(password);
+        return password;
 		
 	}
 	

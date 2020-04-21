@@ -18,7 +18,7 @@ public class AdSetReturnPeriodDaoImp implements AdSetReturnPeriodDao{
 	
 	public String Adid() {
 		
-		String sql = "select * from admin where ad_state=1 ";
+		String sql = "select * from admin_ where ad_state=1 ";
 		String admin = new String();
 		try {
             	DBconn.init();
@@ -40,16 +40,37 @@ public class AdSetReturnPeriodDaoImp implements AdSetReturnPeriodDao{
 		String sql ="update systems set sys_return_time="+returntime;
 		System.out.println(sql);
 		int i =DBconn.addUpdDel(sql);
+		String admin = Adid();
 		if(i>0){
 			flag = true;
-			String admin = Adid();
+
 			logger.info("[ADMIN]ID:"+admin+"update successfully,the new return time is "+returntime);
 			DBconn.closeConn();
 			return flag;
 		}
 		DBconn.closeConn();
-		logger.info("[ADMIN]update failed");
+		logger.info("[ADMIN]ID:"+admin+"update failed");
 		return flag;
+	}
+	
+	/*≤È—Øµ±«∞period*/
+	public int gettime() {
+		
+		int time = 0;
+		String sql = "select * from systems" ;
+		
+		try {
+			DBconn.init();
+			ResultSet rs = DBconn.selectSql(sql);
+			while(rs.next()) {
+				time = rs.getInt("sys_return_time");
+			}
+			DBconn.closeConn();
+			return time;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return time;
+		}
 	}
 
 }

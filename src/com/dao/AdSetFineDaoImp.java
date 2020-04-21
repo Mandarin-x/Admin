@@ -19,7 +19,7 @@ public class AdSetFineDaoImp implements AdSetFineDao{
 	
 	public String Adid() {
 			
-			String sql = "select * from admin where ad_state=1 ";
+			String sql = "select * from admin_ where ad_state=1 ";
 			String admin = new String();
 			try {
 	            	DBconn.init();
@@ -33,7 +33,7 @@ public class AdSetFineDaoImp implements AdSetFineDao{
 	            return admin;
 		}	
 	
-
+	
 	
 	/*修改罚金*/
 	public boolean reset_fine(int new_fine) {
@@ -50,6 +50,26 @@ public class AdSetFineDaoImp implements AdSetFineDao{
 		}	
 		DBconn.closeConn();
 		return flag;
+	}
+	
+	/*查询当前fine*/
+	public int getfine() {
+		
+		int fine = 0;
+		String sql = "select * from systems" ;
+		
+		try {
+			DBconn.init();
+			ResultSet rs = DBconn.selectSql(sql);
+			while(rs.next()) {
+				fine = rs.getInt("sys_fine");
+			}
+			DBconn.closeConn();
+			return fine;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return fine;
+		}
 	}
 }
 

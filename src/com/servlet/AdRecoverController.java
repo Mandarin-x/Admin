@@ -7,7 +7,6 @@
 package com.servlet;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,13 +18,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dao.AdRecoverLibrarianDao;
 import com.dao.AdRecoverLibrarianDaoImpl;
-import com.entity.Librarian;
-import com.entity.Require;
+
 
 @Controller
 public class AdRecoverController {
 
-	AdRecoverLibrarianDao te = new AdRecoverLibrarianDao();
+	AdRecoverLibrarianDao te = new AdRecoverLibrarianDaoImpl();
 	
 
 	
@@ -37,7 +35,7 @@ public class AdRecoverController {
 		ModelAndView recover = new ModelAndView("AdRecover");
 		String id = re.getParameter("id");
 		boolean i = te.RecoverLi(id);
-		recover.addObject("flag",i);
+		recover.addObject("flag", i);
 		return recover;
 	}
 

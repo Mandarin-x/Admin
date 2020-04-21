@@ -25,7 +25,7 @@ public class AdSetDepositDaoImpl implements AdSetDepositDao {
 
 	public String Adid() {
 		
-		String sql = "select * from admin where ad_state=1 ";
+		String sql = "select * from admin_ where ad_state=1 ";
 		String admin = new String();
 		try {
             	DBconn.init();

@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: white;
+}
+
+.heading{
+    background-color:#434172;
+    width: 100%;
+    height: 117px;
+    margin: 0px auto;
+}
+.heading_nav{
+    width: 100%;
+    height: 30px;
+}
+.heading_logo{
+    margin-left: 19px;
+    margin-top: 12px;
+    float: left;
+    width: 279px;
+    height:153px;
+}
+.welcome{
+    margin-left: 300px;
+    width: 279px;
+    font-size: 20px;
+    padding-top:90px;
+    padding-bottom:0px;
+    color:#FFFFFF;
+}
+a:link,a:visited{
+
+    color: #e7e7e9;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+a:active,a:hover{
+    color: #b7acad;
+    text-align: center;
+
+}
+
+.body{
+    background-color: white;
+    background-image:url("../images/bg_all.jpg") ;
+    background-size: cover;
+    width: 75%;
+    height: 500px;
+    margin:50px auto;
+    border-style: groove;
+    border-width: 1px;
+    border-color: #fff9ea;
+}
+.middle_img{
+    margin-right: 90px;
+    margin-top: 160px;
+    float: right;
+    width: 179px;
+    height:150px;
+    font-size:20px;
+    color:white;
+    text-align:center;
+}
+ul,li{list-style: none;}
+nav .level>li{float: right;width: 16.66%;text-align: center; padding-top:-50px; padding-left:10px; padding-right:10px;
+    padding-bottom:10px;font-size: 20px;margin-top:-25px;}
+nav .two{display: none;}  /* 先使二级菜单的内容隐藏 */
+nav .level>li:hover .two{display: block;}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+nav .level>li a{color: white;}
+nav .level>li:hover{background:#434172 ;}
+.footing{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    height:50px;
+    width:80%;
+    border-top-color: #ebeef0;
+    border-top-style: groove;
+    border-top-width: 1px;
+}
+.foot_font{
+    padding-bottom:50px;
+    font-size: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    width:500px;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color:#434172 ;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    width: 450px;
+    height:50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 60px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}

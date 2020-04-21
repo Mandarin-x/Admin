@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.dao.AdSetFineDaoImp;
 
 @Controller
+//@RequestMapping("jsps")
 public class AdSetFineController {
 	//地址：/AdSetFine/jsps/AdSetFine.htm
 	@RequestMapping("AdSetFine")
@@ -23,8 +24,11 @@ public class AdSetFineController {
 		
 		ModelAndView mv = new ModelAndView("AdSetFine");//跳转到AdSetFine.jsp这个页面
 		
+		AdSetFineDaoImp fd=new AdSetFineDaoImp();
 		String amount_string = req.getParameter("sys_fine");
-
+		
+		int i=fd.getfine();
+		mv.addObject("i",i);		
 		if(amount_string==null) {
 			return mv;	
 		} 
@@ -32,11 +36,13 @@ public class AdSetFineController {
 		{
 			mv.addObject("isitexist",-1);
 			return mv;
-		}
-		
+		}		
 		int fi_amount = Integer.parseInt(amount_string);
 
-		AdSetFineDaoImp fd=new AdSetFineDaoImp();
+
+		
+		
+
 
 		if(fd.reset_fine(fi_amount)==true)
 			{

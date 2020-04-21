@@ -3,12 +3,9 @@
 
 
 <%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://"
-            + request.getServerName() + ":" + request.getServerPort()
-            + path + "/";
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<base href="<%=basePath%>"></base>
 
 
 
@@ -18,7 +15,7 @@
 <!--Luo Xue-->
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="css/AdSetReturnPeriod.css">
+<link rel="stylesheet" type="text/css" href="./css/AdSetReturnPeriod.css">
 	<meta charset="ISO-8859-1">
 	<title>Modify default fine</title>
 	<script>
@@ -35,15 +32,15 @@
 <div class="container">
             <div class="heading"><!--页眉内容-->
                 <div class="heading_nav"><!--这里是导航栏内容,要加啥功能模块往这里放-->
-                 <div class="goback"><a href=""><img src="images/home.png" height="40" width="50"/></a></div>
-                    <div class="heading_logo"><img src="images/logo.png" height="153" width="279"/></div>
-                    <div class="welcome">Welcome,Admin System</div><!--XXX填是什么系统，例如Admin-->
+                 <div class="goback"><a href="success.jsp"><img src="./images/home.png" height="40" width="50"/></a></div>
+                    <div class="heading_logo"><img src="./images/logo.png" height="153" width="279"/></div>
+                    <div class="welcome">Welcome,Lend&Return Management System</div><!--XXX填是什么系统，例如Admin-->
                     <nav>
                     <ul class="level">
-                        <li><a href="logout.jsp">LOG OUT</a> </li>
+                        <li><a href="jsps/Adlogout.jsp">LOG OUT</a> </li>
                         <li><a href="">FUNCTION</a>
-                            <ul class="two"><!--è¦åŠ å•¥åŠŸèƒ½æ¨¡å—å¾€è¿™é‡Œ-->
-                                <li><a href="">back to lend&return</a></li>
+                            <ul class="two">
+                                <li><a href="jsps/Adlend.jsp">back to lend&return</a></li>
 
                             </ul>
                         </li>
@@ -55,10 +52,12 @@
             <div class="body"> 
 
 </br></br>
-
+<br><br><br><br><br><br>
+        <div style="font-size: 24px">current fine:${i}</div>
+        <br>
 	<form name="form_1" method="get" action="">
 	
-	   <input class="input_1" name="sys_fine" type="text" value="" placeholder="Modify default book fine">
+	   <input class="input_1" name="sys_fine" type="text" value="" placeholder="Modify default book return time">
 	   </br></br>
    	  
    	 <input class="input_3" type="submit"value="submit" onclick="check()">
@@ -81,8 +80,8 @@
 		<c:otherwise></c:otherwise>
 			
 	</c:choose>
-  <div class="footing"></div><!--页脚内容-->
-  <div class="foot_font">Copyright © 2020 Mandarin C3. All rights reserved.</div>
+    <div class="footing"></div>
+    <div class="foot_font">Copyright Â© 2020 Mandarin C2. All rights reserved.</div>
         </div>
     </body>
 </html>

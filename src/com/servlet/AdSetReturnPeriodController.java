@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dao.AdSetReturnPeriodDaoImp;
@@ -20,8 +19,8 @@ import com.dao.AdSetReturnPeriodDaoImp;
 //Spring的注解；@Controller就表示这是一个servlet
 
 @Controller
+//@RequestMapping("jsps")
 public class AdSetReturnPeriodController {
-	
 	//浏览器的请求地址:/AdSetReturnPeriod/jsps/AdSetReturnPeriod.htm
 	@RequestMapping("AdSetReturnPeriod")
 	public ModelAndView Update(HttpServletRequest req,HttpServletResponse resp) {
@@ -30,6 +29,9 @@ public class AdSetReturnPeriodController {
 
 		AdSetReturnPeriodDaoImp sd = new AdSetReturnPeriodDaoImp();
 		String returntime_string = req.getParameter("returntime");//获取新的还书时间
+		
+		int i=sd.gettime();
+		mv.addObject("i",i);
 		if(returntime_string==null) {
 			return mv;	
 		} 

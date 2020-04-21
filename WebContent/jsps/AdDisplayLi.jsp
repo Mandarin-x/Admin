@@ -47,11 +47,11 @@
                 <div class="welcome">Welcome,Admin System</div><!--XXX填是什么系统，例如Admin-->
                 <nav>
                     <ul class="level">
-                        <li><a href="logout.jsp">LOG OUT</a> </li>
+                        <li><a href="jsps/Adlogout.jsp">LOG OUT</a> </li>
                         <li><a href="">FUNCTION</a>
                             <ul class="two"><!--要加啥功能模块往这里-->
 
-                                <li><a href="">back to lend&return</a></li><!--     add librarian account-->
+                                <li><a href="jsps/Adlend.jsp">back to lend&return</a></li><!--     add librarian account-->
 
 
                             </ul>
