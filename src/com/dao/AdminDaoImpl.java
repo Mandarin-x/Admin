@@ -1,3 +1,7 @@
+/*
+ * Class function: login,changepPassword
+ * Author: Wang Zhaoyi
+ */
 package com.dao;
 
 import java.sql.ResultSet;

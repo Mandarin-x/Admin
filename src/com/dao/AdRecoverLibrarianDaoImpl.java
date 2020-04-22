@@ -1,3 +1,9 @@
+/*
+ * Class function: Recover li account
+ * Author: Wang Kexin
+ * Date: March 26, 2020
+ */
+
 package com.dao;
 
 import java.sql.ResultSet;

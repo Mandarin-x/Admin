@@ -6,13 +6,11 @@ import java.sql.DriverManager;
  
 
 public class DBconn {
-//	static String url = "jdbc:mysql://localhost:3307/mandarin?serverTimezone=GMT&useunicude=true&characterEncoding=utf8"; 
+//	static String url = "jdbc:mysql://localhost:3307/mandarin"; 
 //	static String username = "root"; 
 //	static String password = "1111"; 
 	
-	static String url = "jdbc:mysql://cdb-p25iqzcy.cd.tencentcdb.com:10124/hhh"; 
-	static String username = "root"; 
-	static String password = "abc+123456"; 
+
 	static Connection  conn = null;
 	static ResultSet rs = null;
 	static PreparedStatement ps =null;
