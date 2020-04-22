@@ -28,7 +28,9 @@
    create table librarian (
        li_id varchar(25) not null,
        li_password varchar(25) not null,
-       li_state int
+       li_state int,
+       question varchar(25) not null,
+       answer varchar(25) not null,
    );
    
    create table systems(
@@ -36,8 +38,8 @@
        sys_return_time int,
        sys_deposit int
    );
-   
-   ```
 
+   ```
+   
    
 
