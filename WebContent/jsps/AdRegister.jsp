@@ -27,10 +27,10 @@
     <meta name=”viewport” content=”width=device-width, initial-scale=1″ />
     <link rel="stylesheet" type="text/css" href="./css/css.css">
     <script>
-				function isSuccess(flag) {
-					if(flag==true){
+				function isSuccess() {
+					if(${flag}===true){
 						alert("Register successful!");
-					}else {
+					}else if(${flag}===false) {
 						alert("Register failed!");
 					}
 				}
@@ -63,7 +63,7 @@
             <input class=input_1 id=question type=text size=15 name="qus" placeholder="Validation issues" required="required"><br/>
             <input class=input_1 id=answer type=text size=15 name="ans" placeholder="answer" required="required"><br />
             <br/>
-            <input class=input_3 type="submit" value="Register" onclick="isSuccess(${flag})"/><!--提交表单数据-->
+            <input class=input_3 type="submit" value="Register" /><!--提交表单数据-->
 
         </form>
 
@@ -72,6 +72,9 @@
     <div class="footing"></div>
     <div class="foot_font">Copyright © 2020 Mandarin C2. All rights reserved.</div>
 </div>
+<script>
+			isSuccess();
+</script>
 
 </body>
 
